@@ -13,7 +13,7 @@ angular.module('app', []).controller('productsController', function ($scope, $ht
             }
         })
             .then(function (response) {
-                $scope.ProductsList = response.data.content;
+                $scope.ProductsList = response.data;
             });
     };
 

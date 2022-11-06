@@ -1,24 +1,25 @@
 package ru.gb.lesson7.Services;
 
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import ru.gb.lesson7.Entities.Product;
+import org.springframework.transaction.annotation.Transactional;
+import ru.gb.lesson7.Entities.Products.Product;
+import ru.gb.lesson7.Entities.Products.ProductDto;
 import ru.gb.lesson7.Repositories.ProductsRepository;
 import ru.gb.lesson7.Repositories.ProductsSpecification;
-import java.util.List;
+
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class ProductsService {
 
-    private ProductsRepository productsRepository;
-
-    public ProductsService(ProductsRepository productsRepository) {
-        this.productsRepository = productsRepository;
-    }
+    private final ProductsRepository productsRepository;
 
     public Page<Product> find(Integer page, Integer minCost, Integer maxCost,
                               String partTitle, String sortColumn) {

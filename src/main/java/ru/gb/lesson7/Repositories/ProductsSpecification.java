@@ -1,7 +1,7 @@
 package ru.gb.lesson7.Repositories;
 
 import org.springframework.data.jpa.domain.Specification;
-import ru.gb.lesson7.Entities.Product;
+import ru.gb.lesson7.Entities.Products.Product;
 
 public class ProductsSpecification {
 

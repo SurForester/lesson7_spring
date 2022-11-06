@@ -42,14 +42,14 @@
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault"
-                               value="title" id="flexRadioDefault2"  ng-model="filter.sort_col">
+                               value="title" id="flexRadioDefault2" ng-model="filter.sort_col">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Сортировка по полю TITLE
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault"
-                               value="cost" id="flexRadioDefault3"  ng-model="filter.sort_col">
+                               value="cost" id="flexRadioDefault3" ng-model="filter.sort_col">
                         <label class="form-check-label" for="flexRadioDefault3">
                             Сортировка по полю COST
                         </label>
@@ -71,6 +71,7 @@
                 <p></p>
                 <button type="submit" class="btn btn-primary">Добавить продукт</button>
             </form>
+
         </div>
         <div class="col-9">
             <h3>Список продуктов</h3>
@@ -87,7 +88,7 @@
                     <td>{{s.title}}</td>
                     <td>{{s.cost}}</td>
                     <td>
-                        <button class="btn btn-danger" ng-click="deleteProduct(s.id)">Удалить</button>
+                        <button class="btn btn-info" ng-click="addToBasket(s.id)">В корзину</button>
                     </td>
                 </tr>
                 </tbody>
