@@ -13,3 +13,5 @@ server:
   port: 8189
   servlet:
     context-path: /app
+    session:
+      timeout: 60s
